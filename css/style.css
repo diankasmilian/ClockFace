@@ -321,6 +321,8 @@ background-color: transparent;
 border: 1px solid #FFCB8E;
 }
 
+/* -----------------------------BRANDS----------------------------- */
+
 
 
 /* ==============================DESKTOP============================== */
@@ -477,5 +479,7 @@ border: 1px solid #FFCB8E;
         color: var(--bg);
         background-color: var(--accent);
     }
+
+    /* -----------------------------BRANDS----------------------------- */
 
 }
