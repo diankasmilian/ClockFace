@@ -32,9 +32,24 @@ background-color: var(--bg);
 /* ===================================================== */
 
 .container {
-    max-width: 440px;
+    max-width: 470px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.title {
+    font-family: 'Literata';
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: 0.15em;
+    text-align: center;
+}
+
+.second-title {
+    font-family: 'Literata';
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.15em;
 }
 
 /* -----------------------------HEADER----------------------------- */
@@ -151,17 +166,19 @@ transition: transform, color 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .close-menu {
-    margin-left: 390px;
     margin-bottom: 20px;
 }
 
 .mob-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 5px 15px;
+    padding: 20px 50px;
 
     background-color: var(--bg);
     transition: all 0.3s ease 0s;
@@ -215,6 +232,10 @@ color: var(--accent);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.header-nav {
+    display: none;
 }
 
 .hero {
@@ -284,6 +305,7 @@ color: var(--accent);
     font-family: 'Literata';
 font-weight: 500;
 letter-spacing: 0.15em;
+text-align: center;
 }
 
 .hero-title span {
@@ -323,14 +345,204 @@ border: 1px solid #FFCB8E;
 
 /* -----------------------------BRANDS----------------------------- */
 
+.brands {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.brands-title {
+    margin-bottom: 20px;
+}
+
+.brands-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.brands-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: transform, color, opacity 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.brands-img img {
+    transition: transform 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.brands-img {
+    transition: opacity 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.brands-link-title {
+    transition: background-color, color 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.brands-item:hover .brands-img img,
+.brands-item:focus .brands-img img {
+    transform: scale(1.1);
+}
+
+.brands-item:hover .brands-img,
+.brands-item:focus .brands-img {
+    opacity: 1;
+}
+
+.brands-item:hover .brands-link-title,
+.brands-item:focus .brands-link-title {
+    background-color: transparent;
+    color: var(--white);
+}
+
+/* -----------------------------CATEGORIES----------------------------- */
+
+.categories {
+    padding-top: 153px;
+    padding-bottom: 152px;
+
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background/bg-img-2-mob@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .categories {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../img/background/bg-img-2-mob@2x.jpg);
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+  (min-resolution: 288dpi),
+  (min-resolution: 3dppx) {
+    .categories {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../img/background/bg-img-2-mob@3x.jpg);
+    }
+  }
+
+  .categories-btn-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .categories-btn {
+    width: 245px;
+    padding: 14px 0;
+
+    font-family: 'Literata';;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.15em;
+
+    background-color: var(--accent);
+    color: var(--bg);
+    border: 1px solid var(--accent);
+
+    transition: background-color, color 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  .categories-btn:hover,
+  .categories-btn:focus {
+    background-color: var(--bg);
+    color: var(--accent);
+  }
+
+  /* -----------------------------TOP SELLING----------------------------- */
+
+  .selling {
+    padding: 100px 0;
+  }
+
+  .selling-title {
+    margin-bottom: 80px;
+  }
+
+  .goods-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .goods-item {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--shadow);
+
+    transition: border 250ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  .goods-img img {
+    width: 210px;
+    height: 251px;
+    margin-bottom: 12px;
+  }
+
+  .goods-title {
+    margin-bottom: 4px;
+
+    font-family: 'Literata';
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: var(--accent);
+  }
+
+  .goods-name {
+    margin-bottom: 31px;
+
+    font-family: 'Literata';
+    font-size: 13px;
+    line-height: 1.46;
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+
+  .goods-price {
+    margin-bottom: 8px;
+
+    font-family: 'Literata';
+    font-size: 13px;
+    line-height: 1.46;
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: var(--accent);
+  }
+
+  .goods-item:hover,
+  .goods-item:focus {
+    border: 2px solid var(--accent);
+  }
+
 
 
 /* ==============================DESKTOP============================== */
 
-@media screen and (min-width: 1238px) {
+@media screen and (min-width: 1268px) {
     .container {
        max-width: 1268px;
        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 64px;
+    }
+
+    .second-title {
+        font-size: 24px;
     }
 
     /* -----------------------------HEADER----------------------------- */
@@ -481,5 +693,109 @@ border: 1px solid #FFCB8E;
     }
 
     /* -----------------------------BRANDS----------------------------- */
+
+    .brands {
+        padding-top: 150px;
+        padding-bottom: 200px;
+    }
+
+    .brands-title {
+        margin-bottom: 100px;
+    }
+
+    .brands-img {
+        opacity: 0.7;
+    }
+
+    .brands-link-title {
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        background-color: var(--accent);
+        color: var(--bg);
+    }
+
+    /* -----------------------------CATEGORIES----------------------------- */
+
+    .categories {
+        padding-top: 500px;
+        padding-bottom: 500px;
+
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background/bg-img-2-desktop@1x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(../img/background/bg-img-2-desktop@2x.jpg);
+        }
+      }
+    
+      @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+        .hero {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(../img/background/bg-img-2-desktop@3x.jpg);
+        }
+      }
+
+      .categories-btn {
+        width: 316px;
+        padding: 22px 0;
+    
+        font-size: 24px;
+      }
+
+      /* -----------------------------TOP SELLING----------------------------- */
+
+      .selling {
+        padding: 200px 0;
+      }
+
+      .selling-title {
+        margin-bottom: 100px;
+      }
+
+      .goods-item {
+        background-color: transparent;
+        border: 2px solid transparent;
+      }
+
+      .goods-img img {
+        width: 386px;
+        height: 434px;
+        margin-bottom: 28px;
+      }
+
+      .goods-list {
+        gap: 50px 30px;
+      }
+
+      .goods-title {
+        margin-bottom: 8px;
+    
+        font-size: 20px;
+      }
+    
+      .goods-name {
+        margin-bottom: 20px;
+    
+        font-size: 20px;
+        line-height: 1.5;
+      }
+    
+      .goods-price {
+        margin-bottom: 10px;
+    
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    
 
 }
